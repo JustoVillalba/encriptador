@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="imagenes/Ubuntu.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"  rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="../encriptador/imagenes/Frame 6.png" alt="logo de alura">
+    </header>
+    <main>
+        <section class="contenedor-1">
+            <textarea  onkeypress="return bloquearAcentos(KeyboardEvent)"  class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"  ></textarea>
+            <div>
+                <h6 class="informacion"> <img src="../encriptador/imagenes/exclamation-circle.png" alt="signo de exclamacion miniatura"> Solo letras minúsculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="contenedor-2">
+            <textarea onkeypress="return bloquearAcentos(KeyboardEvent)" id="text-area" class="mensaje" cols="15" rows="10" placeholder="Ningún mensaje fue encontrado"></textarea>
+            <div class="boton-copiar">
+                <button onclick="copiarAlPortapapeles();" class="btn-copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <footer>
+        <p class="copyright">&copy Copyright Justo villalba</p>
+    </footer>
+</body>
+</html>
